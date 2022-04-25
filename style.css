@@ -1,0 +1,71 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(clock.png);
+    height: 300px;
+    width: 300px;
+    background-size: 100% 100%;
+}
+.clock::before{
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+.hour, .minute, .second{
+    position: absolute;
+}
+.clock .hour, .hr{
+    width: 160px;
+    height: 160px;
+}
+.clock .minute, .min{
+    width: 190px;
+    height: 190px;
+}
+.clock .second, .sec{
+    height: 200px;
+    width: 200px;
+}
+.hr, .sec, .min{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.hr::before{
+    position: absolute;
+    content: "";
+    height: 50px;
+    width: 10px;
+    background-color: #0a0a0a;
+    border-radius: 6px 6px 0 0;
+    top: 20px;
+}
+.min::before{
+    position: absolute;
+    content: "";
+    height: 80px;
+    width: 5px;
+    background-color: #0a0a0a;
+    border-radius: 6px 6px 0 0;
+    top: 10px;
+}
+.sec::before{
+    position: absolute;
+    content: "";
+    height: 120px;
+    width: 3px;
+    background-color: red;
+    border-radius: 6px 6px 0 0;
+    top: 0px;
+}
